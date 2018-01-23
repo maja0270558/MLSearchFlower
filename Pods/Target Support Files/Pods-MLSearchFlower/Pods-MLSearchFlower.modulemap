@@ -1,0 +1,6 @@
+framework module Pods_MLSearchFlower {
+  umbrella header "Pods-MLSearchFlower-umbrella.h"
+
+  export *
+  module * { export * }
+}

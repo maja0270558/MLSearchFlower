@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82421F6705D0F609ABDB6362 /* Pods_MLSearchFlower.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8D12BE569489AFDF8DE111E /* Pods_MLSearchFlower.framework */; };
 		EB1E2FEE201727A000B2F944 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E2FED201727A000B2F944 /* AppDelegate.swift */; };
 		EB1E2FF0201727A000B2F944 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB1E2FEF201727A000B2F944 /* ViewController.swift */; };
 		EB1E2FF3201727A000B2F944 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1E2FF1201727A000B2F944 /* Main.storyboard */; };
 		EB1E2FF5201727A000B2F944 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB1E2FF4201727A000B2F944 /* Assets.xcassets */; };
 		EB1E2FF8201727A000B2F944 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB1E2FF6201727A000B2F944 /* LaunchScreen.storyboard */; };
+		EB1E3003201730F000B2F944 /* FlowerClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EB1E3002201730F000B2F944 /* FlowerClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1BECD56D06AE2E6B0BCDB9B0 /* Pods-MLSearchFlower.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLSearchFlower.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLSearchFlower/Pods-MLSearchFlower.release.xcconfig"; sourceTree = "<group>"; };
+		80895FE302445F0CBCD7545B /* Pods-MLSearchFlower.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLSearchFlower.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLSearchFlower/Pods-MLSearchFlower.debug.xcconfig"; sourceTree = "<group>"; };
+		D8D12BE569489AFDF8DE111E /* Pods_MLSearchFlower.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLSearchFlower.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1E2FEA2017279F00B2F944 /* MLSearchFlower.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLSearchFlower.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB1E2FED201727A000B2F944 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB1E2FEF201727A000B2F944 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		EB1E2FF4201727A000B2F944 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB1E2FF7201727A000B2F944 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB1E2FF9201727A000B2F944 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB1E3002201730F000B2F944 /* FlowerClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FlowerClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82421F6705D0F609ABDB6362 /* Pods_MLSearchFlower.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31EFA2FA9AEFE18F2F1A78A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80895FE302445F0CBCD7545B /* Pods-MLSearchFlower.debug.xcconfig */,
+				1BECD56D06AE2E6B0BCDB9B0 /* Pods-MLSearchFlower.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3DD69CC3815CE08DC0BFB62B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8D12BE569489AFDF8DE111E /* Pods_MLSearchFlower.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EB1E2FE12017279F00B2F944 = {
 			isa = PBXGroup;
 			children = (
 				EB1E2FEC2017279F00B2F944 /* MLSearchFlower */,
 				EB1E2FEB2017279F00B2F944 /* Products */,
+				31EFA2FA9AEFE18F2F1A78A9 /* Pods */,
+				3DD69CC3815CE08DC0BFB62B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +80,39 @@
 		EB1E2FEC2017279F00B2F944 /* MLSearchFlower */ = {
 			isa = PBXGroup;
 			children = (
-				EB1E2FED201727A000B2F944 /* AppDelegate.swift */,
-				EB1E2FEF201727A000B2F944 /* ViewController.swift */,
-				EB1E2FF1201727A000B2F944 /* Main.storyboard */,
-				EB1E2FF4201727A000B2F944 /* Assets.xcassets */,
-				EB1E2FF6201727A000B2F944 /* LaunchScreen.storyboard */,
-				EB1E2FF9201727A000B2F944 /* Info.plist */,
+				EB1E2FFF20172A6300B2F944 /* Support File */,
+				EB1E300020172A6D00B2F944 /* Controller */,
+				EB1E300120172A7F00B2F944 /* View */,
 			);
 			path = MLSearchFlower;
+			sourceTree = "<group>";
+		};
+		EB1E2FFF20172A6300B2F944 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				EB1E3002201730F000B2F944 /* FlowerClassifier.mlmodel */,
+				EB1E2FED201727A000B2F944 /* AppDelegate.swift */,
+				EB1E2FF4201727A000B2F944 /* Assets.xcassets */,
+				EB1E2FF9201727A000B2F944 /* Info.plist */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
+		EB1E300020172A6D00B2F944 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB1E2FEF201727A000B2F944 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EB1E300120172A7F00B2F944 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EB1E2FF1201727A000B2F944 /* Main.storyboard */,
+				EB1E2FF6201727A000B2F944 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EB1E2FFC201727A000B2F944 /* Build configuration list for PBXNativeTarget "MLSearchFlower" */;
 			buildPhases = (
+				E9A1513167C825620D8C5087 /* [CP] Check Pods Manifest.lock */,
 				EB1E2FE62017279F00B2F944 /* Sources */,
 				EB1E2FE72017279F00B2F944 /* Frameworks */,
 				EB1E2FE82017279F00B2F944 /* Resources */,
+				D4C639B3D7F4F981E11431D0 /* [CP] Embed Pods Frameworks */,
+				61E679F76F5AB2F79F1C413B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,11 +185,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		61E679F76F5AB2F79F1C413B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLSearchFlower/Pods-MLSearchFlower-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C639B3D7F4F981E11431D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MLSearchFlower/Pods-MLSearchFlower-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLSearchFlower/Pods-MLSearchFlower-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9A1513167C825620D8C5087 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLSearchFlower-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EB1E2FE62017279F00B2F944 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB1E3003201730F000B2F944 /* FlowerClassifier.mlmodel in Sources */,
 				EB1E2FF0201727A000B2F944 /* ViewController.swift in Sources */,
 				EB1E2FEE201727A000B2F944 /* AppDelegate.swift in Sources */,
 			);
@@ -272,11 +385,12 @@
 		};
 		EB1E2FFD201727A000B2F944 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80895FE302445F0CBCD7545B /* Pods-MLSearchFlower.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2CY3RX8F76;
-				INFOPLIST_FILE = MLSearchFlower/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MLSearchFlower/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DjangoCode.MLSearchFlower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,11 +401,12 @@
 		};
 		EB1E2FFE201727A000B2F944 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BECD56D06AE2E6B0BCDB9B0 /* Pods-MLSearchFlower.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2CY3RX8F76;
-				INFOPLIST_FILE = MLSearchFlower/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MLSearchFlower/Support File/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DjangoCode.MLSearchFlower;
 				PRODUCT_NAME = "$(TARGET_NAME)";
